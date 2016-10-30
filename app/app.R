@@ -12,13 +12,17 @@ d = round(mean(diff(grid$lat)[diff(grid$lat)>0]), 3) # read pixel size
 
 
 ui <- bootstrapPage(
-  #tags$head(includeCSS("../doc/styles.css")),
+  tags$head(includeCSS("../lib/styles.css")),
   tags$style(type = "text/css", "html, body {width:100%;height:100%}"),
   leafletOutput("map", width = "100%", height = "100%"),
-  absolutePanel(class = "panel panel-default", top = 10, right = 10,
+  absolutePanel(id = "controls", 
+                class = "panel panel-default", 
+                top = 10, left = 25,
+                draggable = TRUE, 
                 h4("Select preferences"),
-                sliderInput("w_subway", "   Transportation:", min=1, max=100, value=50),
-                sliderInput("w_schools", label = "   Schools:", min=1, max=100, value=50),
+                sliderInput("w_subway", "   Transportation:", min=0, max=100, value=50),
+                sliderInput("w_schools", label = "   Schools:", min=0, max=100, value=50),
+                hr(),
                 sliderInput("opac", label = "   Opacity:", min=0, max=1, value=0.5),
                 submitButton("Update")
   )
@@ -32,7 +36,7 @@ server <- function(input, output, session) {
   # initialize map:
   map = leaflet() %>%
     addTiles() %>%
-    setView(lng = -73.87, lat = 40.75, zoom = 11)
+    setView(lng = -74, lat = 40.7, zoom = 11)
   
 
   #draw map:

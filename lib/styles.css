@@ -1,0 +1,30 @@
+
+/* Customize fonts */
+body, label, input, button, select { 
+  font-family: 'Helvetica Neue', Helvetica;
+  font-weight: 600;
+}
+h1, h2, h3, h4 { font-weight: 600; color:black;}
+
+#controls {
+  /* Appearance */
+  background-color: white;
+  /*background-image:url('https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/29/294/294444/1-f.jpg?1420807091');*/
+  padding: 0 20px 20px 20px;
+  cursor: move;
+  /* Fade out while not hovering */
+  opacity: 0.65;
+  zoom: 1;
+  transition: opacity 500ms 1s;
+}
+#controls:hover {
+  /* Fade in while hovering */
+  opacity: 0.95;
+  transition-delay: 0;
+}
+
+
+/* If not using map tiles, show a white background */
+.leaflet-container {
+  background-color: white !important;
+}

@@ -18,7 +18,7 @@ The great majority of the data used for this project will be obtained from [NYC 
 
 #### Data used in the current app prototype: 
 
-Coordinates of polygons defining each school zone: [2016-2017-School-Zones](https://data.cityofnewyork.us/Education/2016-2017-School-Zones/ux7j-iww6) 
+Coordinates of polygons defining each school zone: [2016-2017 School Zones](https://data.cityofnewyork.us/Education/2016-2017-School-Zones/ux7j-iww6) 
 
 School quality: [School Progress Report 2010-2011](https://data.cityofnewyork.us/Education/School-Progress-Report-2010-2011/upwt-zvh3)
 
@@ -29,8 +29,14 @@ Subway stations and their subway lines: [Subway Stations](https://data.cityofnew
 
 #### Data intended for use in future versions of the app: 
 
-Tree data, for defining a "greenery" parameter: [2015-Street-Tree-Census-Tree-Data](https://data.cityofnewyork.us/Environment/2015-Street-Tree-Census-Tree-Data/uvpi-gqnh)
+* Summary of Neighborhood sales for:
+    - [Manhattan](https://data.cityofnewyork.us/Housing-Development/DOF-Summary-of-Neighborhood-Sales-for-Manhattan-fo/5yay-3jd5)
+    - [Queens](https://data.cityofnewyork.us/Housing-Development/DOF-Summary-of-Neighborhood-Sales-in-Queens-for-Cl/aa5u-mys6)
 
+Geographical information about felony incidents, for defining a "Safety" preference parameter:
+[NYPD Major Felony Incident Map](https://data.cityofnewyork.us/Public-Safety/NYPD-7-Major-Felony-Incident-Map/dvh8-u7es)
+
+Tree data, for defining a "Greenery" preference parameter: [2015-Street-Tree-Census-Tree-Data](https://data.cityofnewyork.us/Environment/2015-Street-Tree-Census-Tree-Data/uvpi-gqnh)
 
 
 
