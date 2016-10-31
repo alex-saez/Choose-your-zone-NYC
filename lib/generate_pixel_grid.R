@@ -32,13 +32,12 @@ zones = zones %>%
 good_ind = integer()
 for(i in 1:nrow(zones)){
   coords = as.matrix(get_polygon_points(zones$the_geom[i]))
-  #good_ind = c(good_ind, which(in.out(coords, grid)))
-  good_ind = c(good_ind, which(in.out(coords, grid_lonlat)))
+  good_ind = c(good_ind, which(in.out(coords, grid)))
 }
 
 grid = grid[good_ind,]
 
-save(grid, file = '../output/grid_002.RData')
+save(grid, file = '../output/grid.RData')
 
 
 

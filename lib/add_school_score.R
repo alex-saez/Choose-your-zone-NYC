@@ -27,7 +27,7 @@ zones$SCORE[is.na(zones$SCORE)] = median(zones$SCORE, na.rm=TRUE) # replace NAs 
 # write.csv(zones, file = '../data/school_zones.csv', row.names = FALSE)
 
 
-#################### get score from score_data and add it to zones ####################################
+#################### now assign score to all pixels within school zone ####################################
 grid = as.matrix(grid)
 
 score = numeric(nrow(zones))
@@ -39,7 +39,7 @@ for(i in 1:nrow(zones)){
 
 score = 100*(score - min(score, na.rm=T)) / (max(score, na.rm=T) - min(score, na.rm=T))
 
-# grid = data.frame(grid, school = score)
+grid = data.frame(grid, school = score)
 # save(grid, file = '../output/grid.RData')
 
 
