@@ -1,5 +1,4 @@
 
-#setwd("C:/Users/Alex/Dropbox/job search/Data incubator/2nd application/Q3/lib")
 
 library(shiny)
 library(leaflet)
@@ -19,11 +18,11 @@ ui <- bootstrapPage(
                 class = "panel panel-default", 
                 top = 10, left = 25,
                 draggable = TRUE, 
-                h4("Select preferences"),
-                sliderInput("w_subway", "   Transportation:", min=0, max=100, value=50),
-                sliderInput("w_schools", label = "   Schools:", min=0, max=100, value=50),
+                h3("Define preferences"),
+                sliderInput("w_subway", "Transportation:", min=0, max=100, value=50),
+                sliderInput("w_schools", label = "Schools:", min=0, max=100, value=50),
                 hr(),
-                sliderInput("opac", label = "   Opacity:", min=0, max=1, value=0.5),
+                sliderInput("opac", label = h5("Display opacity:"), min=0, max=1, value=0.5, width='60%', ticks=FALSE),
                 submitButton("Update")
   )
 )
