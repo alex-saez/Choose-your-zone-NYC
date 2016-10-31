@@ -18,7 +18,7 @@ ui <- bootstrapPage(
                 class = "panel panel-default", 
                 top = 10, left = 25,
                 draggable = TRUE, 
-                h3("Define preferences"),
+                h4("Define preferences"),
                 sliderInput("w_subway", "Transportation:", min=0, max=100, value=50),
                 sliderInput("w_schools", label = "Schools:", min=0, max=100, value=50),
                 hr(),
